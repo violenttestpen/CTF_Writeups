@@ -41,9 +41,9 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 6.73 seconds
 ```
 
-Another fairly simple server, just like ![Hackademic: RTB1](hackademic.rtb1.md). Browsing the website on firefox reveals a simple page:
+Another fairly simple server, just like [Hackademic: RTB1](hackademic.rtb1.md). Browsing the website on firefox reveals a simple page:
 
-![](hackademic.rtbc2_1.png)
+![](hackademic.rtb2_1.png)
 
 ---
 
@@ -95,7 +95,7 @@ root@kali:~# nikto -host http://192.168.1.100/Hackademic_RTB1
 
 Aside from the main page, anything I tried on the login doesn't seem to work. Feeling desperate, I tried a full port scan on all 65536 ports. Still the same 2 ports showed up. However, when I tried using curl on port 666, it gave me a webpage! What is this? Running another nmap scan on that port revealed another Apache instance! Is this a case of port knocking? I believe that a full range port scan disabled the port knock, thereby opening up port 666 to the web.
 
-![](hackademic.rtbc2_2.png)
+![](hackademic.rtb2_2.png)
 
 Looks like a Joomla installation. With that, let us move on to Stage 3.
 
